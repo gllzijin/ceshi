@@ -431,6 +431,7 @@ body{
 	color:#63a1db;
 	padding:0px 8px;
 	font-weight: 600;
+	padding-top:3px;
 }
 .resultUL li .listFa{
 	float:right;
