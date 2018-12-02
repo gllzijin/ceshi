@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>升学指导测验-专业选择测试</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrapValidator.css" />
+	<link rel="stylesheet" href="css/jquery.alertable.css" />
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="warpper">
+		<form action="" id="payform">
+			<input name="online_id" type="hidden" id="online_id" readonly="true" length="20" >
+		</form>
+		
+		<div class="header">
+			<img src="images/top.png" alt="图片加载失败">
+		</div>
+		<div class="content">
+			<div class="payMain">
+				<div class="payMain_top clearfix">
+					<div class="payImg" style="width:13%;float:left;"><img src="images/pay.png" alt="图片加载失败"></div>
+					<div class="payTxt"><strong> 网 上 支 付</strong></div>					
+				</div>
+				<div class="payMain_center">
+					<p>需要支付的金额：40元</p>
+					<p>此查询字符串&nbsp;&nbsp;<span id="online_idstr" style="color:#BC1700;font-weight: bold;"></span>&nbsp;&nbsp;用于您取回卡号和密码，建议您记录下该信息</p>
+					<p>请在确认以上信息后点击&#12288;<i class="fa fa-sign-in" onclick="formsub();"></i>&#12288;进入支付页面</p>
+					<p>&nbsp;</p>
+					<p>您是否忘记卡号和密码？您可以通过<a href="toQuery.html" style="text-decoration: underline;color:#BC1700;">点击这里取回</a>您的卡号和密码</p>					
+				</div>
+				<div class="payMain_bottom clearfix">
+					<div class="pay-left" onclick="javascript:location.href='login.html'">
+						<i class="fa fa-hand-o-left" aria-hidden="true"></i> 测 试 页 面
+					</div>
+					<div class="pay-right" onclick="javascript:location.href='http://sx.neea.edu.cn'">
+						<i class="fa fa-hand-o-right" aria-hidden="true"></i> 了 解 更 多 测 试
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- 弹出警告框 -->
+	<script type="text/javascript" src="js/jquery.alertable.min.js"></script>
+	<script type="text/javascript" src="js/sx.js"></script>
+	<script type="text/javascript" src="js/page/toPay.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>升学指导测验-专业选择测试</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrapValidator.css" />
+	<link rel="stylesheet" href="css/jquery.alertable.css" />	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="warpper">
+		<div class="header">
+			<img src="images/top.png" alt="图片加载失败">
+		</div>
+		<div class="main-container">
+				
+			<form class="form" id="informationForm">
+					<div class="form-group">
+						<input type="text" id="name" name="name" data-required="1" class="form-control" placeholder="姓名"/>
+					</div>
+					<div class="form-group">
+						<select id="sex" name="sex" class="form-control">
+							<option value="0">性别</option>
+							<option value="男">男</option>
+							<option value="女">女</option>
+						</select>
+					</div>
+					<div class="form-group clearfix"  id="city_1">
+						<select id="param_province" name="param_province" type="text" class="form-control prov" max-size="5">
+						</select>
+						<select id="param_city" name="param_city" type="text" class="form-control city" max-size="5" disabled="disabled">
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="text" id="schoolName" name="schoolName" data-required="1" class="form-control" placeholder="学校名称" />
+					</div>
+					<div class="form-group">
+						<p><b style="color:#4472c4;">特别提示：</b></p>
+						<p class="indent">本测试主要帮助高中生认识自身兴趣和专业胜任力，为其在进行专业选择和职业生涯规划时提供建议。</p>
+						<p class="indent">本测试分两部分，共210道题，作答时间约45分钟。为保证结果准确性和客观性，请如实作答。</p>
+					</div>
+				<button id="start" class="btn btn-lg btn-primary btn-block" type="button">开 始 答 题</button>			
+			</form>
+		</div>		
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/jquery.cityselect.js"></script>
+	<script type="text/javascript" src="js/page/welcome.js"></script>
+</body>
+</html>
