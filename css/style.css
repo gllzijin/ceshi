@@ -309,7 +309,7 @@ body{
   width:100%;
 }
 .score .default-statu{
-  height: 22px;
+  height: 20px;
   width:205px;
   float: left;
 }
@@ -321,7 +321,7 @@ body{
   background-repeat: no-repeat;
   background-position: top right;
   display: inline-block;
-  height: 22px;
+  height: 20px;
   width:30px;
 }
 .score-expression .default-statu .default-icon{
@@ -331,7 +331,7 @@ body{
   background-position: right -22px;
 }
 .score-description{
-	height:22px;
+	height:20px;
 	line-height: 23px;
 	margin-left:1%;
 	float:left;

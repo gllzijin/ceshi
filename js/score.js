@@ -4,7 +4,7 @@
     this.obj = obj ;
     this.len = 6 ;
     this.eachWidth = null;
-    this.eachHeight = 22;
+    this.eachHeight = 20;
     this.countEachImg();
 
     this.defaultDOM();
