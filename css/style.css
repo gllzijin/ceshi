@@ -328,7 +328,7 @@ body{
   background-position: top right;
 }
 .score-star .default-statu .default-icon{
-  background-position: right -22px;
+  background-position: right -20px;
 }
 .score-description{
 	height:20px;
@@ -341,6 +341,7 @@ body{
 /*result.html*/
 .resultContent{
 	margin-top:20px;
+	margin-bottom: 5px;
 }
 .resultContent>h2{
 	width:95%;
