@@ -399,7 +399,7 @@ function activeScores(event,level){
 		if(q < level){
 			$(event).parents("[class^='score-']").find('.default-icon').eq(q).css({
 				"backgroundPositionX":-28 * (level-1)+3*(4-level)+2,
-				"backgroundPositionY":-22 * _index
+				"backgroundPositionY":-20 * _index
 			});
 		}else{
 			$(event).parents("[class^='score-']").find('.default-icon').eq(q).css({"backgroundPositionX":"right"});

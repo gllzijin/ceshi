@@ -5,7 +5,6 @@ html{width:100%;}
 html,body,.warpper{height:100%;}
 body{
 	font-family:Arial, Helvetica, sans-serif;
-	/*background-image: url("../images/login_bgx.png");*/
 }
 .warpper{
 	width:100%;
@@ -62,18 +61,18 @@ body{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.form select{
+	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: scroll;
+}
 .form input[type="text"], .form input[type="password"], .form select{
 	margin-bottom:20px;
 	width:100%;	
-}
-.form select{
-	appearance:none;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	background-image: url("../images/arrow.png");
-    	background-repeat: no-repeat;
-    	background-position: right center;
-    	background-attachment: scroll;
 }
 .form .btn{
 	margin:25px auto 0 auto;
@@ -97,24 +96,12 @@ body{
 	bottom:0px;	
 	clear:both;
 }
-/*.warpper #guide{
-	width: 62%;
-	position: absolute;
-	bottom: 30px;
-    margin: 6% auto;
-    font-size:0.9rem;
-	color:#8e8d8d;
+#guide{
+	width:83%;
+	margin:30% auto 0 auto;
 	
 }
 #guide p{
-	margin-bottom:0;
-}*/
-.footer #guide{
-	width:62%;
-	margin:0 auto 30% auto;
-	
-}
-.footer #guide p{
 	margin-bottom:0px;
 	font-size:0.9rem;
 	color:#8e8d8d;
@@ -122,6 +109,7 @@ body{
 .footer>p{
 	text-align: center;
 	font-size:0.8rem;
+	margin-top:20px;
 }
 .header img{
 	width:100%;
@@ -350,7 +338,7 @@ body{
 /*result.html*/
 .resultContent{
 	margin-top:20px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .resultContent>h2{
 	width:95%;
@@ -403,6 +391,10 @@ body{
 	color:#63a1db;
 	padding:2px 8px 0 5px;
 }
+.testResult {
+	margin-top:10px;
+	margin-bottom:10px;
+}
 .testResult h2{
 	font-size: 0.9rem;
 }
@@ -434,14 +426,12 @@ body{
 .resultUL li>a{
 	display: block;
 	color:#333;
-	padding:8px 12px;	
-	/*font-size:1rem;*/
+	padding:8px 12px;
 }
 .resultUL li .fa{
 	color:#63a1db;
 	padding:0px 8px;
 	font-weight: 600;
-	padding-top:3px;
 }
 .resultUL li .listFa{
 	float:right;
@@ -473,8 +463,8 @@ body{
 	#informationForm input[type="text"], #informationForm input[type="password"], #informationForm select{
 		margin-bottom:0;
 	}
-	.footer #guide{
-		margin:0 auto 15% auto;
+	#guide{
+		margin:9% auto 0 auto;
 		
 	}
 }
@@ -493,11 +483,26 @@ body{
 	#informationForm input[type="text"], #informationForm input[type="password"], #informationForm select{
 		margin-bottom:20px;
 	}
-	.footer #guide{
-		margin:0 auto 30% auto;
+	#guide{
+		margin:9% auto 0 auto;
 		
 	}
 }
+@media screen and (min-width: 375px) {
+	#guide{
+		margin:15% auto 0 auto;
+		
+	}
+}
+@media screen and (width:375px) and (-webkit-device-pixel-ratio: 3) {
+	.questions h3{
+		margin-top:9%;
+	}
+	#guide{
+		margin:40% auto 0 auto;
+		
+	}
+} 
 
 @media screen and (min-width: 400px) { 
 	html {font-size: 18px;}
