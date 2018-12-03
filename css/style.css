@@ -66,6 +66,11 @@ body{
 	margin-bottom:20px;
 	width:100%;	
 }
+.form select{
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
 .form .btn{
 	margin:25px auto 0 auto;
 	padding:8px 0;
