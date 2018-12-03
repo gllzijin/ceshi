@@ -55,13 +55,18 @@
 				        	</div>
 			            </li>
 			            <li>
-			            	<a class="clearfix" href="javascript:;" onclick="getListContent(this)"><i class="fa fa-file-text-o"></i><strong>测 试 结 果 及 解 释 说 明</strong><i class="fa fa-sort-desc listFa"></i></a> 
+			            	<a class="clearfix echartList" href="javascript:;" onclick="getListContent(this)"><i class="fa fa-file-text-o"></i><strong>测 试 结 果 及 解 释 说 明</strong><i class="fa fa-sort-desc listFa"></i></a> 
 							<div class="listContent">
 								<p class="indent">根据测试信息，我们为您提供了测试结果分析、特征解释和一些专业选择建议，希望它能帮助您挑选出理想的专业，协助您完成人生中一次重要的选择。</p>
 								<p><strong>一、测试结果分析</strong></p>
 			                   	<p class="indent">升学指导测验-专业选择测试”的职业兴趣测验部分将所有人的职业兴趣分为七种类型，分别是技术型、自然型、研究型、艺术型、社会型、经营型和事务型，职业胜任力测验主要测查的是学生完成与七种职业兴趣类型相关的活动或工作的把握程度，也分为对应的七种类型。</p>
 			                   	<p class="indent">下图为测试结果剖析图，黄色柱体代表学生在各个兴趣类型上的得分，红色柱体代表学生在各个能力类型上的得分，这两个得分表明了学生的兴趣和能力在其同年龄群体中的相对位置。得分越高表示学生从事该活动的兴趣越浓，或者越有可能完成该类活动，这也是我们推荐专业的基本依据。</p>
-			                   	<div id="testTable" style=" height:400px;">
+			                   	
+			                   	
+								    <img src="" id="img"/>
+							
+											                   	<div id="testTable" style=" height:400px;display:none;">
+
 			                                    	
 			                   	</div>
 			                   	<p class="indent"><strong>根据您的兴趣类型，我们可以做出下面的解释：</strong></p>
@@ -317,12 +322,12 @@
 						type:'shadow'
 					}
 				},
-				toolbox:{
-					show:true,
-					feature:{
-						saveAsImage:{show:true}
-					}
-				},
+				// toolbox:{
+				// 	show:true,
+				// 	feature:{
+				// 		saveAsImage:{show:true,title:"保存"}
+				// 	}
+				// },
 				legend:{
 					data:['兴趣','胜任力'],
 					y:'bottom' //图文说明文字设置
@@ -386,6 +391,23 @@
 				]
 			};
 			echart.setOption(option);
+			setTimeout(function() {
+            	var img = new Image();
+	            img.src = echart.getDataURL({
+	                type:"png",
+	                backgroundColor: '#fff'
+	            });
+	            $(".echartList").click(function(){
+	            	var canvas=document.createElement("canvas");
+	                canvas.width=img.width;
+	                canvas.height=img.height;
+	                var ctx=canvas.getContext('2d');
+	               	ctx.drawImage(img,0,0);
+	                var  dataURL=canvas.toDataURL('image/png');
+	 				document.getElementById('img').setAttribute("src",dataURL);
+	            })
+            }, 1000)
+
 		})
 
 		function getListContent(event){
