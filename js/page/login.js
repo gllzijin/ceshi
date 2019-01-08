@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$('#loginForm').bootstrapValidator({
 		fields:{
 			userId:{
@@ -29,6 +30,28 @@ $(document).ready(function(){
 	})
 })
 
+// 软键盘
+var windheight = $(window).height();  /*未唤起键盘时当前窗口高度*/
+        
+$(window).resize(function(){
+   var docheight = $(window).height();  /*唤起键盘时当前窗口高度*/        
+   if(docheight < windheight){            /*当唤起键盘高度小于未唤起键盘高度时执行*/
+      $(".footer").css("position","static");
+   }else{
+      $(".footer").css("position","absolute");
+   }           
+});
+
+//屏幕旋转时
+$(document).bind('orientationchange',function(){ 
+    if(window.orientation==90 || window.orientation==-90){ 
+        $('.footer').css('position','static'); 
+    }else{ 
+        $('.footer').css('position','absolute'); 
+    } 
+}); 
+
+// 登录
 $("#loginForm .btn").unbind('click').click(function(){
 	$("#loginForm").bootstrapValidator('validate');
 	var cardNum = $("#cardNum").val();
