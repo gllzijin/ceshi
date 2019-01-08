@@ -12,6 +12,7 @@ body{
 	min-height:100%;
 	margin:0 auto;
 	font-size: 0.9rem;
+	position: relative;
 }
 #demand{
 	display:table;
@@ -53,7 +54,6 @@ body{
 }
 .form .form-control {
   	border-radius: 10px;
-  	position: relative;
   	height: auto;
   	padding: 10px;
   	line-height: 1.4;
@@ -97,7 +97,7 @@ body{
 	clear:both;
 }
 #guide{
-	width:83%;
+	width:85%;
 	margin:30% auto 0 auto;
 	
 }
@@ -280,12 +280,13 @@ body{
 .testSwiper{
 	width:95%;
 }
+.testSwiper .pages{
+	width:65%;
+}
 .testSwiper a,.testSwiper .pages,.testSwiper input.btn{
 	display:inline-block;
-	width:33%;
-	float:left;
 	text-align: center;
-	padding:8px 0px;
+	padding:5px 0px;
 	font-size: 0.9rem;
 	letter-spacing:2px;
 }
@@ -307,7 +308,7 @@ body{
 }
 .score .default-statu{
   height: 20px;
-  width:205px;
+  width:217px;
   float: left;
 }
 .score-expression,.score-star{
@@ -319,7 +320,7 @@ body{
   background-position: top right;
   display: inline-block;
   height: 20px;
-  width:30px;
+  width:32px;
 }
 .score-expression .default-statu .default-icon{
   background-position: top right;
@@ -430,7 +431,7 @@ body{
 }
 .resultUL li .fa{
 	color:#63a1db;
-	padding:0px 8px;
+	padding:2px 8px;
 	font-weight: 600;
 }
 .resultUL li .listFa{
@@ -449,10 +450,10 @@ body{
 @media screen and (min-width: 320px) { 
 	html {font-size: 14px;} 
 	.questions h3{
-		margin-top:2%;
+		margin-top:0%;
 	}
 	.testLead p{
-		margin-bottom:5px;
+		margin-bottom:2px;
 	} 
 	.testSwiper{
 		margin:0 auto;
@@ -460,11 +461,14 @@ body{
 	.swiper-slide{
 		padding:0 0.2rem;
 	}
+	.form .form-control{
+		padding:7px 10px;
+	}
 	#informationForm input[type="text"], #informationForm input[type="password"], #informationForm select{
 		margin-bottom:0;
 	}
 	#guide{
-		margin:9% auto 0 auto;
+		margin:6% auto 0 auto;
 		
 	}
 }
@@ -480,6 +484,9 @@ body{
 	.swiper-slide{
 		padding:0 0.2rem;
 	}
+	.form .form-control{
+		padding:10px;
+	}
 	#informationForm input[type="text"], #informationForm input[type="password"], #informationForm select{
 		margin-bottom:20px;
 	}
@@ -489,6 +496,9 @@ body{
 	}
 }
 @media screen and (min-width: 375px) {
+	.testLead p{
+		margin-bottom:5px;
+	}
 	#guide{
 		margin:15% auto 0 auto;
 		
@@ -496,7 +506,7 @@ body{
 }
 @media screen and (width:375px) and (-webkit-device-pixel-ratio: 3) {
 	.questions h3{
-		margin-top:9%;
+		margin-top:6%;
 	}
 	#guide{
 		margin:40% auto 0 auto;
@@ -507,7 +517,7 @@ body{
 @media screen and (min-width: 400px) { 
 	html {font-size: 18px;}
 	.questions h3{
-		margin-top:4%;
+		margin-top:2%;
 	}
 	.testSwiper{
 		margin:10px auto 0 auto;
@@ -523,7 +533,7 @@ body{
 @media screen and (min-width: 440px) { 
 	html {font-size: 20px;}
 	.questions h3{
-		margin-top:4%;
+		margin-top:2%;
 	}
 	.testSwiper{
 		margin:10px auto 0 auto;
@@ -539,7 +549,7 @@ body{
 @media screen and (min-width: 480px) { 
 	html {font-size: 22px;}
 	.questions h3{
-		margin-top:4%;
+		margin-top:2%;
 	}
 	.testSwiper{
 		margin:10px auto 0 auto;
@@ -555,7 +565,7 @@ body{
 @media screen and (min-width: 640px) { 
 	html {font-size: 28px;}
 	.questions h3{
-		margin-top:4%;
+		margin-top:2%;
 	}
 	.testSwiper{
 		margin:30px auto 0 auto;
@@ -571,5 +581,10 @@ body{
 	}
 	.score-description{
 		font-size:0.6rem;
+	}
+}
+@media screen and (min-width: 1248px) { 
+	.footer{
+		position: static;
 	}
 }
